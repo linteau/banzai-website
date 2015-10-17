@@ -1,2 +1,24 @@
+$footer-height: 100px
+
 @import "bootstrap-sprockets"
 @import "bootstrap"
+
+*
+  margin: 0
+
+html,
+body
+  height: 100%
+
+.wrapper
+  min-height: 100%
+  height: auto !important
+  height: 100%
+  margin: 0 auto
+  margin-bottom: -1 * $footer-height
+  // the bottom margin is the negative value of the footer's height
+
+.footer,
+.push
+  height: $footer-height
+  // .push must be the same height as .footer

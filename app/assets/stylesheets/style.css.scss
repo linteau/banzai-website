@@ -25,9 +25,28 @@
 //  height: $footer-height
 //  // .push must be the same height as .footer
 
+// Header
+
 a.navbar-brand img{ 
 	margin-top:-10px;
  	padding:5px;
  	height: 40px;
 }
+
+// Front Page
+
+div.front-page-mid-section{
+	text-align:center;
+}
+
+// Footer
+
+div.footer{
+	margin-top:25px;
+	div.container{
+		text-align: center;
+	}
+}
+
+
 

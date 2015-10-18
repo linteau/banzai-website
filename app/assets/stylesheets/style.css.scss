@@ -1,5 +1,4 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 //$footer-height: 25px
 //$header-height: 50px
@@ -25,9 +24,22 @@
 //  height: $footer-height
 //  // .push must be the same height as .footer
 
+// Other
+.extendfull, .extendleft
+{
+	padding-left: 3000px;
+	margin-left: -3000px;
+}
+
+.extendfull, .extendright
+{
+	padding-right: 3000px;
+	margin-right: -3000px;
+}
+
 // Header
 
-a.navbar-brand img{ 
+a.navbar-brand img{
 	margin-top:-10px;
  	padding:5px;
  	height: 40px;
@@ -47,6 +59,3 @@ div.footer{
 		text-align: center;
 	}
 }
-
-
-

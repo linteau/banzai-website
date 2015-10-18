@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/customers'=> 'static_pages#customers'
+  get '/features'=> 'static_pages#features'
 
   get '/pricing' => 'static_pages#pricing'
 

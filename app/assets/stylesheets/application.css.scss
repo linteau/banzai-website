@@ -14,10 +14,15 @@
  *= require_self
  */
 
+// libs
 @import "bourbon";
-@import "style";
-@import "static_pages";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+//vendors
 @import "pricing-tables/style";
+
+// application
+@import "style";
+@import "static_pages";
+@import "pricing";

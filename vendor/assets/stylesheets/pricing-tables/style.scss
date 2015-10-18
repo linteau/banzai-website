@@ -216,16 +216,21 @@ Main Components
 	pointer-events: none;
 	background-color: $color-3;
 	color: $color-4;
+	margin-top:0;
 
 	h2 {
 		margin-bottom: 3px;
-		font-weight: 700;
+		font-weight: 300;
 		text-transform: uppercase;
+		margin-top: 0;
+		font-size:20px;
 	}
 
 	.cd-popular & {
 		background-color: $color-2;
 	}
+
+
 
 	@include MQ(M) {
 		height: auto;
@@ -245,15 +250,17 @@ Main Components
 		}
 
 		h2 {
+			margin-top: 0 !important;
 			font-size: 1.8rem;
 			letter-spacing: 2px;
+			font-weight: 300px !important;
 		}
 	}
 }
 
 .cd-currency, .cd-value {
 	font-size: 3rem;
-	font-weight: 300;
+	font-weight: 100;
 }
 
 .cd-duration {

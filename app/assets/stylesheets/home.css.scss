@@ -1,0 +1,35 @@
+@import 'partials/layout';
+@import 'partials/variables';
+
+header div.jumbotron {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-image: linear-gradient(60deg, $color-1-dark, $color-1, $color-2, $color-2-dark);
+  color: $color-4;
+
+  @include MQ(M) {
+    padding-top: 10em;
+    padding-bottom: 10em;
+  }
+
+  .row { margin: 0; }
+}
+
+// Front Page
+
+div.front-page-mid-section {
+	text-align:left;
+  padding-bottom:3em;
+
+  div.icon {
+    height: 160px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:160px;
+
+    span.glyphicon {
+      font-size:6em;
+    }
+  }
+}

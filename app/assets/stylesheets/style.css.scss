@@ -33,12 +33,6 @@ a.navbar-brand img{
  	height: 40px;
 }
 
-// Front Page
-
-div.front-page-mid-section{
-	text-align:center;
-}
-
 // Footer
 
 div.footer{
@@ -48,14 +42,13 @@ div.footer{
 	}
 }
 
-.cd-header p{
-	margin-top:20px;
-	line-height:20px !important;
-	font-size:16px;
-	font-weight: 300 !important;
-}
+//.cd-header p{
+//	margin-top:20px;
+//	line-height:20px !important;
+//	font-size:16px;
+//	font-weight: 300 !important;
+//}
 
-.jumbotron .row { margin: 0; }
 
 /* --------------------------------
 
@@ -67,9 +60,9 @@ Primary style
 //	@include box-sizing(border-box);
 //}
 
-html {
-	font-size: 62.5%;
-}
+//html {
+//	font-size: 62.5%;
+//}
 
 html * {
 	-webkit-font-smoothing: antialiased;
@@ -78,7 +71,7 @@ html * {
 
 body {
 	font: {
-		size: 1.6rem;
+		size: 1.6em;
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: $color-1;
@@ -86,6 +79,14 @@ body {
 }
 
 a {
-	color: $color-2;
+	color: $color-4;
 	text-decoration: none;
+}
+
+header.inner-page {
+	padding: 2em 0;
+}
+
+h1,h2,h3,h4,h5 {
+	font-weight:100;
 }

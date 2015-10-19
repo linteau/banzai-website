@@ -41,10 +41,10 @@ Main Components
 .cd-pricing-container {
 	width: 90%;
 	max-width: $L;
-	margin: 4em auto;
+	margin: 0 auto;
 
 	@include MQ(M) {
-		margin: 6em auto;
+		margin: 0 auto;
 
 		&.cd-full-width {
 			width: 100%;
@@ -54,7 +54,7 @@ Main Components
 }
 
 .cd-pricing-list {
-	margin: 2em 0 0;
+	margin: 0em 0 0;
 
 	> li {
 		position: relative;
@@ -83,7 +83,7 @@ Main Components
 	}
 
 	@include MQ(M) {
-		margin: 3em 0 0;
+		margin: 0em 0 0;
 		@include clearfix;
 
 		> li {
@@ -126,13 +126,13 @@ Main Components
 			}
 
 			.cd-secondary-theme & {
-				background: $color-3;
-				@include background(linear-gradient(to top, $color-3, adjust-color($color-3, $green: 50)));
+				background: $color-1;
+				@include background(linear-gradient(to top, $color-1, $color-1-dark));
 			}
 
 			.cd-secondary-theme &.cd-popular {
 				background: $color-2;
-				@include background(linear-gradient(to top, $color-2, adjust-color($color-2, $green: 30)));
+				@include background(linear-gradient(to top, $color-2-dark, $color-2));
 				box-shadow: none;
 			}
 		}
@@ -178,7 +178,7 @@ Main Components
 	height: $pt-header-mobile-height;
 	padding: 1em;
 	pointer-events: none;
-	background-color: $color-3;
+	background-color: $color-1;
 	color: $color-4;
 	margin-top:0;
 
@@ -230,7 +230,7 @@ Main Components
 .cd-duration {
 	font-weight: 700;
 	font-size: 1.3rem;
-	color: lighten($color-3, 20%);
+	color: lighten($color-1, 20%);
 	text-transform: uppercase;
 
 	.cd-popular & {
@@ -392,7 +392,6 @@ Main Components
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
-	color: transparent;
 
 	@include MQ(M) {
 		position: static;
@@ -408,14 +407,14 @@ Main Components
 		letter-spacing: 2px;
 
 		.no-touch &:hover {
-			background-color: darken($color-1, 5%);
+			background-color: darken($color-1, 15%);
 		}
 
 		.cd-popular & {
 			background-color: $color-2;
 
 			.no-touch &:hover {
-				background-color: lighten($color-2, 5%);
+				background-color: lighten($color-2, 15%);
 			}
 		}
 

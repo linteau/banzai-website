@@ -1,0 +1,87 @@
+<!-- Flash Message from form -->
+
+<div align="center">
+	<% flash.each do |key, value| %>
+	<div class='alert-<%=key%>'>
+  	<a href="#" data-dismiss="alert">×</a>
+    <%= value %>
+	</div>
+	<% end %>
+</div>
+
+<!-- Jumbo header at the top of the page -->
+<header>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row"><h1>The Outbound Sales Cloud</h1></div>
+      <div class="row">
+        <p class="col-md-8" style="padding:0;">Banzai is scalable, on-demand outbound sales infrastructure,
+        so you can launch and manage high-tough campaigns in minutes, not weeks.</p>
+      </div>
+      <div class="row">
+        <p><a class="btn btn-default btn-lg" href="/features" role="button">Learn more</a></p>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End the Jumbo container -->
+
+<!-- Start the bottom widgets -->
+<div class="container">
+  <div class="row front-page-mid-section">
+    <div class="col-md-8">
+      <h2>Pay for What You Use</h2>
+      <p>
+        With an in house team or traditional agency, you bear the cost of full time employees and management overhead. With Banzai, you only pay for what you use.
+      </p>
+      <a class="btn btn-default" href="/pricing" role="button">View Pricing</a>
+    </div>
+    <div class="col-md-4 icon hidden-sm">
+      <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+    </div>
+  </div>
+  <div class="row front-page-mid-section">
+    <div class="col-md-4 icon hidden-sm">
+      <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+    </div>
+    <div class="col-md-8">
+      <h2>Campaigns in the Cloud</h2>
+      <p>
+        Save weeks of meetings, planning, and management. Launching a Banzai campaign is as simple and fast as launching an email marketing campaign.
+      </p>
+      <a class="btn btn-default" href="#" role="button">View Features</a>
+    </div>
+  </div>
+  <div class="row front-page-mid-section">
+    <div class="col-md-8">
+      <h2>Campaign Reporting</h2>
+      <p>
+        Performance metrics matter. Banzai includes detailed reporting for leads, call outcomes, and other campaign data, and integrates with the CRM and marketing systems you already use.
+      </p>
+      <a class="btn btn-default" href="#" role="button">View Features</a>
+    </div>
+    <div class="col-md-4 icon hidden-sm">
+      <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+    </div>
+  </div>
+</div>			
+
+<div class="row" style="background-color:#f28A5B; color:#FFF;">
+  <div class="col-md-4 hidden-sm"></div>
+  <div class="col-md-4">
+			
+	  <%= simple_form_for @lead, :html => {:class => 'form-horizontal form-home', :style => 'margin:2em 0;' } do |f| %>
+	  	<h2>Get Started Now</h2>
+	    <%= f.input :email,label: 'Email Address', :required => false, :html_input => {id: 'inputEmail'}%>
+	    <%= f.input :name, :required => false %>
+	    <%= f.input :phone, :required => false %>
+	    <div class= "hidden">
+	      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+	    </div>
+	    
+	    <%= f.button :submit, 'Submit', :class=> "btn btn-default form-home" %>
+	  <% end %>
+	</div>
+	<div class="col-md-4 hidden-sm"></div>
+</div>
+  

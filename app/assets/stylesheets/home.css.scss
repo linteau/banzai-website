@@ -4,14 +4,18 @@
 header div.jumbotron {
   padding-top: 2em;
   padding-bottom: 2em;
-  background-image: linear-gradient(60deg, $color-1-dark, $color-1, $color-2, $color-2-dark);
+  //background-image: linear-gradient(60deg, $color-1-dark, $color-1, $color-2, $color-2-dark);
+  background-image:url('https://s3.amazonaws.com/banzaihq.com/home-background-images/banzai-brp-jumbotron.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: $color-4;
 
   @include MQ(M) {
     padding-top: 10em;
     padding-bottom: 10em;
   }
-
+  h1 { font-weight: 500; }
   .row { margin: 0; }
 }
 

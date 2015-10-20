@@ -1,0 +1,21 @@
+@import 'partials/variables';
+@import 'partials/layout';
+
+div.features-marketing-panel {
+  padding: 2em 0;
+  background-image: linear-gradient(0deg, $color-1, $color-1-dark);
+  color: $color-4;
+  h1,h2,h3,h4,h5 { color: $color-3; }
+}
+div.features-sales-panel {
+  padding: 2em 0;
+  background-image: linear-gradient(0deg, $color-2, $color-2-dark);
+  color: $color-3;
+
+  h2,h3{ font-weight: 500; }
+  h1,h2,h3,h4,h5 { color: $color-3; }
+
+  text-shadow: $color-1 1px 1px 1px;
+  a { text-shadow: none; }
+
+}

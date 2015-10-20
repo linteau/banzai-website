@@ -10,7 +10,7 @@ class Lead < MailForm::Base
   def headers
     {
       :subject => "My Contact Form",
-      :to => "andy@banzaihq.com",
+      :to => "sales@banzaihq.com",
       :from => %("#{name}" <#{email}>) 
     }
   end

@@ -8,10 +8,10 @@ class LeadsController < ApplicationController
     @lead = Lead.new(params[:lead]) 
     if @lead.deliver
       flash[:success] = 'Thank you for your message. We will contact you soon!'
-      redirect_to :leads
+      redirect_to leads_path(anchor: 'homepage-form')
     else
-      flash.now[:error] = 'Cannot send message.'
-      render :new
+      flash[:error] = 'There was an error with your form submission, please try again!'
+      redirect_to leads_path(anchor: 'homepage-form')
     end
   end
 end

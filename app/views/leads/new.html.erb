@@ -1,16 +1,5 @@
-<!-- Flash Message from form -->
-
-<div align="center">
-	<% flash.each do |key, value| %>
-	<div class='alert-<%=key%>'>
-  	<a href="#" data-dismiss="alert">×</a>
-    <%= value %>
-	</div>
-	<% end %>
-</div>
-
 <!-- Jumbo header at the top of the page -->
-<header>
+<header onload="bottom()">
   <div class="jumbotron">
     <div class="container">
       <div class="row"><h1>The Outbound Sales Cloud</h1></div>
@@ -67,14 +56,26 @@
 </div>			
 
 <div class="row" style="background-color:#f28A5B; color:#FFF;">
-  <div class="col-md-4 hidden-sm"></div>
+	<!-- Flash Message from form -->
+
+	<div align="center">
+		<% flash.each do |key, value| %>
+		<div class='alert-<%=key%>'>
+	  	<a href="#" data-dismiss="alert">×</a>
+	    <p style="text-align:center; padding-bottom:23px;"><%= value %></p>
+		</div>
+		<% end %>
+	</div>
+
+  <div id="bottom" class="col-md-4 hidden-sm"></div>
+  <a name="homepage-form"></a>
   <div class="col-md-4">
 			
-	  <%= simple_form_for @lead, :html => {:class => 'form-horizontal form-home', :style => 'margin:2em 0;' } do |f| %>
+	  <%= simple_form_for @lead, :html => {:class => 'form-horizontal form-home', :style => 'margin:2em 10%; max-width:80%' } do |f| %>
 	  	<h2>Get Started Now</h2>
-	    <%= f.input :email,label: 'Email Address', :required => false, :html_input => {id: 'inputEmail'}%>
-	    <%= f.input :name, :required => false %>
-	    <%= f.input :phone, :required => false %>
+	    <%= f.input :email,label: 'Email Address', :required => false, :html_input => {id: 'inputEmail'}, placeholder: 'john@doe.com' %>
+	    <%= f.input :name, :required => false, placeholder: 'John Doe' %>
+	    <%= f.input :phone, :required => false, placeholder: '(123) 123-4567' %>
 	    <div class= "hidden">
 	      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
 	    </div>

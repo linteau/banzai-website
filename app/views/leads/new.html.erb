@@ -71,16 +71,17 @@
   <a name="homepage-form"></a>
   <div class="col-md-4">
 			
-	  <%= simple_form_for @lead, :html => {:class => 'form-horizontal form-home', :style => 'margin:2em 10%; max-width:80%' } do |f| %>
-	  	<h2>Get Started Now</h2>
-	    <%= f.input :email,label: 'Email Address', :required => false, :html_input => {id: 'inputEmail'}, placeholder: 'john@doe.com' %>
-	    <%= f.input :name, :required => false, placeholder: 'John Doe' %>
+	  <%= simple_form_for @lead, :html => {:id => 'lead_form' ,:class => 'form-horizontal form-home', :style => 'margin:2em 10%; max-width:80%' } do |f| %>
+	  	<h2 id="start">Get Started Now</h2>
+	    <%= f.input :email,label: 'Email Address', :required => false, :html_input => {id: 'inputEmail',:class => "js-email-validation"}, placeholder: 'john@doe.com' %>
+	    <%= f.input :fullname, :required => false, placeholder: 'John Doe' %>
 	    <%= f.input :phone, :required => false, placeholder: '(123) 123-4567' %>
-	    <div class= "hidden">
+
+      <div class= "hidden">
 	      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
 	    </div>
 	    
-	    <%= f.button :submit, 'Submit', :class=> "btn btn-default form-home" %>
+	    <%= f.button :submit, 'Submit', :class=> "btn btn-default form-home", :id => "btn_validate" %>
 	  <% end %>
 	</div>
 	<div class="col-md-4 hidden-sm"></div>

@@ -54,16 +54,23 @@
   </div>
 </div>
 <div class="row home-page-form-section">
+  <!-- Flash Message from form -->
+
+  <div align="center">
+    <% flash.each do |key, value| %>
+    <div class='alert-<%=key%>'>
+      <a href="#" data-dismiss="alert">×</a>
+      <p style="text-align:center; padding-bottom:23px;"><%= value %></p>
+    </div>
+    <% end %>
+  </div>
+
+  <a name="homepage-form"></a>
   <div class="col-md-4 hidden-sm"></div>
   <div class="col-md-4">
-    <form action='https://banzai.activehosted.com/proc.php' method='post' id='_form_14' accept-charset='utf-8' enctype='multipart/form-data' class="form-horizontal form-home" style="margin:2em 10%; max-width:80%;">
+    <form action='/leads' method='post' id='_form_14' accept-charset='utf-8' enctype='multipart/form-data' class="form-horizontal form-home" style="margin:2em 10%; max-width:80%;">
       <h2>Get Started Now</h2>
-      <input type='hidden' name='f' value='14'>
-      <input type='hidden' name='s' value=''>
-      <input type='hidden' name='c' value='0'>
-      <input type='hidden' name='m' value='0'>
-      <input type='hidden' name='act' value='sub'>
-      <input type='hidden' name='nlbox[]' value='1'>
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
       <div class="form-group">
         <label class="control-label" for="lead_name">Full Name</label>
         <input class="form-control" type='text' name='fullname' id="lead_name" />

@@ -54,41 +54,11 @@
   </div>
 </div>
 <div class="row home-page-form-section">
-  <!-- Flash Message from form -->
-
-  <div align="center">
-    <% flash.each do |key, value| %>
-    <div class='alert-<%=key%>'>
-      <a href="#" data-dismiss="alert">×</a>
-      <p style="text-align:center; padding-bottom:23px;"><%= value %></p>
-    </div>
-    <% end %>
-  </div>
-
-  <a name="homepage-form"></a>
   <div class="col-md-4 hidden-sm"></div>
   <div class="col-md-4">
-    <form action='/leads' method='post' id='_form_14' accept-charset='utf-8' enctype='multipart/form-data' class="form-horizontal form-home" style="margin:2em 10%; max-width:80%;">
-      <h2>Get Started Now</h2>
-      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-      <div class="form-group">
-        <label class="control-label" for="lead_name">Full Name</label>
-        <input class="form-control" type='text' name='fullname' id="lead_name" />
-      </div>
-      <div class="form-group">
-        <label class="control-label" for="lead_email">Email</label>
-        <input class="form-control" type='email' name='email' id="lead_email" />
-      </div>
-      <div class="form-group">
-        <label class="control-label" for="lead_phone">Phone</label>
-        <input class="form-control" type='text' name='phone' id="lead_phone" />
-      </div>
-      <div class="form-group">
-        <label class="control-label" for="lead_company">Company</label>
-        <input class="form-control" type='text' name='org' id="lead_company" />
-      </div>
-      <input class="btn btn-default btn btn-default form-home" type='submit' value="Subscribe">
-    </form>
+
+    <%= render '../shared/form' %>
+
   </div>
   <div class="col-md-4 hidden-sm"></div>
 </div>

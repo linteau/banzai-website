@@ -58,31 +58,22 @@
 <div class="row" style="background-color:#f28A5B; color:#FFF;">
 	<!-- Flash Message from form -->
 
-	<div align="center">
-		<% flash.each do |key, value| %>
-		<div class='alert-<%=key%>'>
-	  	<a href="#" data-dismiss="alert">×</a>
-	    <p style="text-align:center; padding-bottom:23px;"><%= value %></p>
-		</div>
-		<% end %>
-	</div>
+	
 
   <div id="bottom" class="col-md-4 hidden-sm"></div>
   <a name="homepage-form"></a>
   <div class="col-md-4">
+    <div align="center">
+    <% flash.each do |key, value| %>
+    <div class='alert-<%=key%>'>
+      <a href="#" data-dismiss="alert">×</a>
+      <p style="text-align:center; padding-bottom:23px;"><%= value %></p>
+    </div>
+    <% end %>
+  </div>
 			
-	  <%= simple_form_for @lead, :html => {:id => 'lead_form' ,:class => 'form-horizontal form-home', :style => 'margin:2em 10%; max-width:80%' } do |f| %>
-	  	<h2 id="start">Get Started Now</h2>
-	    <%= f.input :email,label: 'Email Address', :required => false, :html_input => {id: 'inputEmail',:class => "js-email-validation"}, placeholder: 'john@doe.com' %>
-	    <%= f.input :fullname, :required => false, placeholder: 'John Doe' %>
-	    <%= f.input :phone, :required => false, placeholder: '(123) 123-4567' %>
+	  <%= render '../shared/form' %>
 
-      <div class= "hidden">
-	      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-	    </div>
-	    
-	    <%= f.button :submit, 'Submit', :class=> "btn btn-default form-home", :id => "btn_validate" %>
-	  <% end %>
 	</div>
 	<div class="col-md-4 hidden-sm"></div>
 </div>

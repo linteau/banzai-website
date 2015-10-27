@@ -1,7 +1,8 @@
 class Lead < MailForm::Base
-  attribute :fullname,      :validate => true, :message => "Put some address please"
-  attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :org
+  attribute :name,       :validate => true
+  attribute :phone,      :validate => true, :message => "Put some address please"
+  attribute :email,      :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute :company,    :validate => true
   attribute :phone
   attribute :nickname,  :captcha  => true
 
@@ -11,7 +12,7 @@ class Lead < MailForm::Base
     {
       :subject => "My Contact Form",
       :to => "andy@banzaihq.com",
-      :from => %("#{fullname} #{email} #{phone} #{org}") 
+      :from => %("#{phone} #{email} #{phone} #{company}") 
     }
   end
 end

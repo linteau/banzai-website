@@ -1,0 +1,22 @@
+<div align="center">
+  <% flash.each do |key, value| %>
+  <div class='alert-<%=key%>'>
+    <a href="#" data-dismiss="alert">×</a>
+    <p style="text-align:center; padding-bottom:23px;"><%= value %></p>
+  </div>
+  <% end %>
+</div>
+
+<a name="homepage-form"></a>
+<%= simple_form_for @lead, :html => {:id => 'lead_form' ,:class => 'form-horizontal form-home', :style => 'margin:2em 10%; max-width:80%' } do |f| %>
+	<h2 id="start">Get Started Now</h2>
+  <%= f.input :name, :required => false, placeholder: 'John Doe' %>
+  <%= f.input :email,label: 'Email Address', :required => false, placeholder: 'john@doe.com' %>
+  <%= f.input :phone, :required => false, placeholder: '(123) 123-4567' %>
+  <%= f.input :company, :required => false, placeholder: 'My Company' %>
+  <div class= "hidden">
+    <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+  </div>
+	    
+	<%= f.button :submit, 'Submit', :class=> "btn btn-default form-home"%>
+<% end %>
